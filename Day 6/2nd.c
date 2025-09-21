@@ -1,14 +1,19 @@
 #include <stdio.h>
+
 int main() {
-    int n, i;
-    unsigned long long fact = 1;
-    printf("Enter a number: ");
+    int n, i, sum = 0;
+
+    // Input
+    printf("Enter a positive integer: ");
     scanf("%d", &n);
 
-    for (i = 1; i <= n; i++) {
-        fact *= i;
+    // Calculate sum using loop
+    for(i = 1; i <= n; i++) {
+        sum = sum + i;
     }
 
-    printf("Factorial of %d = %llu\n", n, fact);
+    // Output
+    printf("The sum of the first %d natural numbers is: %d\n", n, sum);
+
     return 0;
 }
